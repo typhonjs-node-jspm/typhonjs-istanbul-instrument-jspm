@@ -57,6 +57,7 @@ export default function instrumentIstanbulSystem(System, sourceFilePathRegex = /
       // Use `sourceFilePathRegex` to test file path for source instrumentation.
       if (sourceFilePathRegex.test(filePath))
       {
+         /* istanbul ignore catch */
          try
          {
             // If a source file passes the ES6 / ES Module regex test then use the ESM instrumenter.
