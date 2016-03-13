@@ -1,0 +1,6 @@
+{
+   "title": "typhonjs-istanbul-instrument-jspm",
+   "source": "src",
+   "destination": "docs",
+   "manual": { "changelog": ["./CHANGELOG.md"] }
+}
