@@ -15,3 +15,4 @@ By using this module SystemJS can be instrumented for code coverage with Istanbu
 
 For a comprehensive ES6 build / testing / publishing NPM module please see [typhonjs-npm-build-test](https://www.npmjs.com/package/typhonjs-npm-build-test) as it combines this module along with transpiling ES6 sources with Babel, pre-publish script detection, ESDoc dependencies, testing with Mocha / Istanbul and an Istanbul instrumentation hook for JSPM / SystemJS tests. 
 
+Please review [istanbul-jspm-coverage-example](https://github.com/typhonjs-demos-test/istanbul-jspm-coverage-example) for a complete working example which uses `typhonjs-npm-build-test` and subsequently this module which is included as a dependency to `typhonjs-npm-build-test`. 
