@@ -16,3 +16,31 @@ By using this module SystemJS can be instrumented for code coverage with Istanbu
 For a comprehensive ES6 build / testing / publishing NPM module please see [typhonjs-npm-build-test](https://www.npmjs.com/package/typhonjs-npm-build-test) as it combines this module along with transpiling ES6 sources with Babel, pre-publish script detection, ESDoc dependencies, testing with Mocha / Istanbul and an Istanbul instrumentation hook for JSPM / SystemJS tests. 
 
 Please review [istanbul-jspm-coverage-example](https://github.com/typhonjs-demos-test/istanbul-jspm-coverage-example) for a complete working example which uses `typhonjs-npm-build-test` and subsequently this module which is included as a dependency to `typhonjs-npm-build-test`. 
+
+-----
+
+In short an ES6 Mocha test that instruments Istanbul will do the following:
+```
+import jspm                      from 'jspm';
+
+import instrumentIstanbulSystem  from 'typhonjs-istanbul-instrument-jspm';
+
+// Set the package path to the local root where config.js is located.
+jspm.setPackagePath(process.cwd());
+
+// Create SystemJS Loader
+const System = new jspm.Loader();
+
+// Replaces System.translate with version that provides Istanbul instrumentation.
+instrumentIstanbulSystem(System);
+```
+
+`instrumentIstanbulSystem` takes two parameters:
+```
+(object)   System - An instance of SystemJS.
+
+(RegExp)   sourceFilePathRegex - (optional) A regex which defines which source files are instrumented; default excludes
+                                 any sources with file paths that includes `jspm_packages`.
+```
+
+It should be noted that the default source file path regex is defined as `/^((?!jspm_packages).)*$/` which excludes any sourcecode loaded from `jspm_packages`. You may optionally pass in a regex as the second parameter to `instrumentIstanbulSystem`. An example of excluded both `jspm_packages` and `./test/src` is: `instrumentIstanbulSystem(System, /^((?!jspm_packages|test\/src\/).)*$/);`.
