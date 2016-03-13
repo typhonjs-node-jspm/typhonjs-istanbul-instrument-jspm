@@ -43,4 +43,4 @@ instrumentIstanbulSystem(System);
                                  any sources with file paths that includes `jspm_packages`.
 ```
 
-It should be noted that the default source file path regex is defined as `/^((?!jspm_packages).)*$/` which excludes any sourcecode loaded from `jspm_packages`. You may optionally pass in a regex as the second parameter to `instrumentIstanbulSystem`. An example of excluded both `jspm_packages` and `./test/src` is: `instrumentIstanbulSystem(System, /^((?!jspm_packages|test\/src\/).)*$/);`.
+It should be noted that the default source file path regex is defined as `/^((?!jspm_packages).)*$/` which excludes any sourcecode loaded from `jspm_packages`. You may optionally pass in a regex as the second parameter to `instrumentIstanbulSystem`. An example of excluding both `jspm_packages` and `./test/src` is: `instrumentIstanbulSystem(System, /^((?!jspm_packages|test\/src\/).)*$/);`.
