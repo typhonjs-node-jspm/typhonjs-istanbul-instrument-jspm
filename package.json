@@ -1,6 +1,6 @@
 {
   "name": "typhonjs-istanbul-instrument-jspm",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "homepage": "https://github.com/typhonjs-node-jspm/typhonjs-istanbul-instrument-jspm/",
   "description": "Provides a NPM module to add Istanbul instrumentation to JSPM / SystemJS by replacing the System.translate hook.",
   "license": "MPL-2.0",
