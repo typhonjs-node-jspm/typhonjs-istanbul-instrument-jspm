@@ -45,7 +45,7 @@ instrumentIstanbulSystem(System);
 
 It should be noted that the default source file path regex is defined as `/^((?!jspm_packages).)*$/` which excludes any sourcecode loaded from `jspm_packages`. You may optionally pass in a regex as the second parameter to `instrumentIstanbulSystem`. An example of excluding both `jspm_packages` and `./test/src` is: `instrumentIstanbulSystem(System, /^((?!jspm_packages|test\/src\/).)*$/);`.
 
-A final important detail when using Istanbul is that the `cover` command will not pickup the source instrumented via `typhonjs-istanbul-instrument-jspm` when an initial report is generated, however the instrumentation is represented in `coverage.raw.json`. To make sure SystemJS sources are represented in the final report simply run the Istanbul `report` command and the original source will be included in the report. This is automated by the [mocha-istanbul-report]() NPM script that is included as part of `typhonjs-npm-build-test` / `typhonjs-npm-scripts-test-mocha`. 
+A final important detail when using Istanbul is that the `cover` command will not pickup the source instrumented via `typhonjs-istanbul-instrument-jspm` when an initial report is generated, however the instrumentation is represented in `coverage.raw.json`. To make sure SystemJS sources are represented in the final report simply run the Istanbul `report` command and the original source will be included in the report. This is automated by the [mocha-istanbul-report](https://www.npmjs.com/package/typhonjs-npm-scripts-test-mocha) NPM script that is included as part of `typhonjs-npm-build-test` / `typhonjs-npm-scripts-test-mocha`. 
 
 In `package.json` add an NPM script like the following:
 ```
