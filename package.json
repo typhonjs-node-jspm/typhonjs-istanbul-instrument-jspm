@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/typhonjs-node-jspm/typhonjs-istanbul-instrument-jspm/typhonjs-istanbul-instrument-jspm.git"
+    "url": "https://github.com/typhonjs-node-jspm/typhonjs-istanbul-instrument-jspm.git"
   },
   "maintainers": [
     {
@@ -36,10 +36,10 @@
   "jspm": {
     "directories": {},
     "devDependencies": {
-      "babel": "npm:babel-core@^5.8.35",
-      "babel-runtime": "npm:babel-runtime@^5.8.35",
-      "core-js": "npm:core-js@^1.2.6",
-      "underscore": "npm:underscore@^1.8.3"
+      "babel": "npm:babel-core@^5.0.0",
+      "babel-runtime": "npm:babel-runtime@^5.0.0",
+      "core-js": "npm:core-js@^1.0.0",
+      "underscore": "npm:underscore@^1.0.0"
     }
   },
   "typhonjs": {
